@@ -1,0 +1,8 @@
+CC=gcc
+LIBS=-lm -lsquid -lRNA
+INCLUDE=-I ../../../local/include -I /usr/local/src/tarballs/ViennaRNA-1.5/H
+L=-L ../../../local/lib
+CFLAGS=-O3
+
+randfold: randfold.c
+	$(CC) $(CFLAGS) $(INCLUDE) $(L) -o randfold randfold.c $(LIBS)
