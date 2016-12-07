@@ -1,5 +1,5 @@
-RANDFOLD - A randsomization test for sequence secondary structure 
-Copyright (C) 2005 Eric Bonnet - Bioinformatics & Evolutionary Genomics - VIB
+RANDFOLD - A randomization test for sequence secondary structure 
+Copyright (c) 2005 Eric Bonnet - Bioinformatics & Evolutionary Genomics - VIB
 -----------------------------------------------------------------------------
 
 This is RANDFOLD version 2. The software compute the probability that, for a 
