@@ -6,4 +6,56 @@ In contrast with transfer RNAs and ribosomal RNAs, the majority of the microRNA 
 
 This test can be used together with other indicators to predict and charaterize microRNA sequences. For more information, see Bonnet et al. ["Evidence that microRNA precursors, unlike other non-coding RNAs, have lower folding free energies than random sequences"](http://bioinformatics.oxfordjournals.org/content/20/17/2911.abstract).
 
-See the file readme.txt for more information on how to compile and use the software.
+
+## Download and Installation
+
+Clone the github repository with the command:
+
+```
+git clone https://github.com/eb00/randfold randfold_src
+```
+Go to the newly created `randfold_src` directory, and then to `src`.
+
+The code needs the SQUID library (written by [Sean Eddy](http://eddylab.org/software.html)). A copy of this library (version 1.9g) is distributed with this software. To compile it, go to the `squid-1.9g` directory and then type:
+
+```
+./configure && make
+```
+If everything goes well, you should have a file named `libsquid.a` in the directory.
+
+Then move up one level (`src`) and type:
+```
+make
+```
+
+
+The code is using Ivo Hofacker's [ViennaRNA library](http://www.tbi.univie.ac.at/~ivo/RNA/) to fold sequences (installation not required).
+
+
+## Usage
+
+```
+./randfold <method> <file name> <number of randomizations>
+
+Methods available:
+-s  simple mononucleotide shuffling
+-d  dinucleotide shuffling
+-m  markov chain 1 shuffling
+
+Example:
+randfold -d let7.tfa 999
+
+Output:
+<sequence name> tab <mfe> tab <probability>
+
+Example:
+cel-let-7       -42.90  0.001000
+
+```
+
+## Fee
+
+This software is free of charge for academics and non-profit organizations. Please contact the authors for
+any commercial usage.
+
+
