@@ -27,7 +27,16 @@ Then move up one level (`src`) and type:
 ```
 make
 ```
-You should now see the compiled program `randfold`. You can copy this program to `/usr/local/bin` or any directory within your PATH and you're ready to go.
+You should see a few compilation messages such as:
+```
+gcc -c energy_par.c
+gcc -c params.c
+gcc -c fold.c
+gcc -c fold_vars.c
+gcc -c utils.c
+gcc -O3 -I. -Lsquid-1.9g -Isquid-1.9g  -o randfold params.o energy_par.o fold.o fold_vars.o utils.o randfold.c -lm -lsquid
+```
+And now the compiled program `randfold` should be available. You can copy this program to `/usr/local/bin` or any directory within your PATH and you're ready to go.
 
 NB: the code is using Ivo Hofacker's [ViennaRNA library](http://www.tbi.univie.ac.at/~ivo/RNA/) to fold sequences (installation not required).
 
