@@ -27,9 +27,9 @@ Then move up one level (`src`) and type:
 ```
 make
 ```
+You should now see the compiled program `randfold`. You can copy this program to `/usr/local/bin` or any directory within your PATH and you're ready to go.
 
-
-The code is using Ivo Hofacker's [ViennaRNA library](http://www.tbi.univie.ac.at/~ivo/RNA/) to fold sequences (installation not required).
+NB: the code is using Ivo Hofacker's [ViennaRNA library](http://www.tbi.univie.ac.at/~ivo/RNA/) to fold sequences (installation not required).
 
 
 ## Usage
