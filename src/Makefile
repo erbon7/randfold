@@ -1,6 +1,6 @@
 CC=gcc
 LIBS=-lm -lsquid 
-INCLUDE=-I. 
+INCLUDE=-I. -Lsquid-1.9g -Isquid-1.9g 
 CFLAGS=-O3
 
 randfold: energy_par.o params.o fold.o fold_vars.o utils.o randfold.c
